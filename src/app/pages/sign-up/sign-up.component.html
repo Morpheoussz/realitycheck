@@ -1,0 +1,394 @@
+<nav class="navbar navbar-expand-md navbar-expand-lg colorr2 sticky-top">
+  <a class="navbar-brand colorr" href="" routerLink="">RealityCheck
+    <!-- <img class="sizee" src="../../../assets/img/icons/magnifeye.png" alt="Reality-Check"/> -->
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="cover">
+    <span class="navbar-toggler-icon line"></span>
+    <span class="navbar-toggler-icon line"></span>
+    <span class="navbar-toggler-icon line"></span>
+    </span>
+  </button>
+  <!-- <i class="fa fa-bars fa-2x" aria-hidden="true"></i> -->
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <span class="space"></span>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link colorr" href="" routerLink="">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link colorr" pageScroll href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link colorr" pageScroll href="#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link colorr" pageScroll href="#support">Support</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link colorr" href="" routerLink="/sign-in">Sign In</a>
+      </li>
+        
+    </ul>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row mt-5" >
+    <div class="col-lg-3 col-md-3">
+
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <div class="header">
+        <h3>Sign Up</h3><br>
+        <p>Save and Track your Daily Expenses</p>
+        <!-- <p>Invest with us, in the world's most secure investment platform</p> -->
+    
+      </div>
+      <div class="shadow p-4 bg-white curve">
+        <div class="signin p-4">
+          <!-- <div class="container"> -->
+            <form name="signUp" [formGroup]="signUp">
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <input type="email" name="email" class="form-control large" placeholder="Email" formControlName="email" [ngClass]="{'is-invalid': signUp.get('email').touched && signUp.get('email').invalid }">
+                  <div *ngIf="signUp.get('email').touched && signUp.get('email').invalid" class="invalid-feedback">
+                    <div *ngIf="signUp.get('email').errors.required" class="text-left">Email is required</div>
+                    <div *ngIf="signUp.get('email').errors.email" class="text-left">Email must be a valid email address</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <input type="text" name="username" class="form-control large" placeholder="Username" formControlName="username" [ngClass]="{'is-invalid': signUp.get('username').touched && signUp.get('username').invalid }">
+                  <div *ngIf="signUp.get('username').touched && signUp.get('username').invalid" class="invalid-feedback">
+                    <div *ngIf="signUp.get('username').errors.required" class="text-left">Username is required</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12 input-group">
+                  <input type="password" [type]="fieldTextType ? 'text' : 'password'" name="password" class="form-control large" placeholder="Password" formControlName="password" [ngClass]="{'is-invalid': signUp.get('password').touched && signUp.get('password').invalid }">
+                  <div class="input-group-append">
+                    <span class="input-group-text">
+                      <i class="fa" [ngClass]="{
+                        'fa-eye-slash': !fieldTextType,
+                        'fa-eye': fieldTextType
+                      }" (click)="toggleFieldTextType()"></i>
+                    </span>
+                 </div>
+                  <div *ngIf="signUp.get('password').touched && signUp.get('password').invalid" class="invalid-feedback">
+                    <div *ngIf="signUp.get('password').errors.required" class="text-left">Password is required</div>
+                    <div *ngIf="signUp.get('password').errors.minlength" class="text-left">Password must be atleast 8 characters</div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <p class="alert-light mt-1">Password should contain at least one capital letter, one number and should be 8 characters long</p>
+                </div>
+                
+    
+              </div>
+              <div class="s-tip row">
+                <div class="col-sm-12">
+                  <p><i class="fa fa-lock lockc" aria-hidden="true"></i><span class="lockc"> Security tip:</span> Do not reuse old passwords</p>
+                  <hr>
+                </div>
+              </div>
+              <div class="location row">
+    
+                <div class="col-sm-12">
+                  <p><i class="fa fa-map-marker lockc" aria-hidden="true"></i> Where is your primary residence?</p>
+                  <!-- <hr> -->
+                  
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <select class="form-control large" name="country" formControlName="country" [ngClass]="{'is-invalid': signUp.get('country').touched && signUp.get('country').invalid }">
+                    <option disabled selected>--Country of residence--</option>
+                    <!-- <option disabled="" selected="" value="">--select your country--</option> -->
+                    <option>United States</option>
+                    <option>Afghanistan</option>
+                    <option>Albania</option>
+                    <option>Algeria</option>
+                    <option>Americann samoa</option>
+                    <option>Andorra</option>
+                    <option>Angolla</option>
+                    <option>Anguilla</option>
+                    <option>Antarctica</option>
+                    <option>Antigua and Barbuda</option>
+                    <option>Argentina</option>
+                    <option>Armenia</option>
+                    <option>Aruba</option>
+                    <option>Australia</option>
+                    <option>Austria</option>
+                    <option>Azerbaidjan</option>
+                    <option>Bahamas</option>
+                    <option>Bahrain</option>
+                    <option>Bangladesh</option>
+                    <option>Barbados</option>
+                    <option>Belarus</option>
+                    <option>Belgium</option>
+                    <option>Belize</option>
+                    <option>Benin</option>
+                    <option>Bermuda</option>
+                    <option>Bhutan</option>
+                    <option>Bolivia</option>
+                    <option>Bosnia-Herzegovina</option>
+                    <option>Botswana</option>
+                    <option>Bouvet Island</option>
+                    <option>Brazil</option>
+                    <option>British Indian Ocean Territory</option>
+                    <option>Brunei Darussalam</option>
+                    <option>Bulgaria</option>
+                    <option>Burkina Faso</option>
+                    <option>Burundi</option>
+                    <option>Cambodia</option>
+                    <option>Cameroon</option>
+                    <option>Canada</option>
+                    <option>Cape Verde</option>
+                    <option>Cayman Islands</option>
+                    <option>Central African Republic</option>
+                    <option>Chad</option>
+                    <option>Chile</option>
+                    <option>China</option>
+                    <option>Christmas Island</option>
+                    <option>Cocos (Keeling) Islands</option>
+                    <option>Colombia</option>
+                    <option>Comoros</option>
+                    <option>Congo</option>
+                    <option>Congo (Democratic Republic)</option>
+                    <option>Cook Islands</option>
+                    <option>Costa Rica</option>
+                    <option>Croatia</option>
+                    <option>Cuba</option>
+                    <option>Cyprus</option>
+                    <option>Czech Republic</option>
+                    <option>Denmark</option>
+                    <option>Djibouti</option>
+                    <option>Dominica</option>
+                    <option>Dominican Republic</option>
+                    <option>East Timor</option>
+                    <option>Ecuador</option>
+                    <option>Egypt</option>
+                    <option>El Salvador</option>
+                    <option>Equatorial Guinea</option>
+                    <option>Eritrea</option>
+                    <option>Estonia</option>
+                    <option>Ethiopia</option>
+                    <option>Falkland Islands</option>
+                    <option>Faroe Islands</option>
+                    <option>Fiji</option>
+                    <option>Finland</option>
+                    <option>France</option>
+                    <option>France (European Territory)</option>
+                    <option>French Guiana</option>
+                    <option>French Southern Territories</option>
+                    <option>Gabon</option>
+                    <option>Gambia</option>
+                    <option>Georgia</option>
+                    <option>Germany</option>
+                    <option>Ghana</option>
+                    <option>Gibraltar</option>
+                    <option>Great Britain</option>
+                    <option>Greece</option>
+                    <option>Greenland</option>
+                    <option>Grenada</option>
+                    <option>Guadeloupe</option>
+                    <option>Guam</option>
+                    <option>Guatemala</option>
+                    <option>Guinea</option>
+                    <option>Guinea Bissau</option>
+                    <option>Guyana</option>
+                    <option>Haiti</option>
+                    <option>Heard and McDonald Islands</option>
+                    <option>Holy See (Vatican City State)</option>
+                    <option>Honduras</option>
+                    <option>Hong Kong</option>
+                    <option>Hungary</option>
+                    <option>Iceland</option>
+                    <option>India</option>
+                    <option>Indonesia</option>
+                    <option>Iran</option>
+                    <option>Iraq</option>
+                    <option>Ireland</option>
+                    <option>Israel</option>
+                    <option>Italy</option>
+                    <option>Ivory Coast (Cote D`Ivoire)</option>
+                    <option>Jamaica</option>
+                    <option>Japan</option>
+                    <option>Jordan</option>
+                    <option>Kazakhstan</option>
+                    <option>Kenya</option>
+                    <option>Kiribati</option>
+                    <option>Kuwait</option>
+                    <option>Kyrgyz Republic (Kyrgyzstan)</option>
+                    <option>Laos</option>
+                    <option>Latvia</option>
+                    <option>Lebanon</option>
+                    <option>Lesotho</option>
+                    <option>Liberia</option>
+                    <option>Libya</option>
+                    <option>Liechtenstein</option>
+                    <option>Lithuania</option>
+                    <option>Luxembourg</option>
+                    <option>Macau</option>
+                    <option>Macedonia</option>
+                    <option>Madagascar</option>
+                    <option>Malawi</option>
+                    <option>Malaysia</option>
+                    <option>Maldives</option>
+                    <option>Mali</option>
+                    <option>Malta</option>
+                    <option>Marshall Islands</option>
+                    <option>Martinique</option>
+                    <option>Mauritania</option>
+                    <option>Mauritius</option>
+                    <option>Mayotte</option>
+                    <option>Mexico</option>
+                    <option>Micronesia</option>
+                    <option>Moldavia</option>
+                    <option>Monaco</option>
+                    <option>Mongolia</option>
+                    <option>Montserrat</option>
+                    <option>Morocco</option>
+                    <option>Mozambique</option>
+                    <option>Myanmar</option>
+                    <option>Namibia</option>
+                    <option>Nauru</option>
+                    <option>Nepal</option>
+                    <option>Netherlands</option>
+                    <option>Netherlands Antilles</option>
+                    <option>New Caledonia</option>
+                    <option>New Zealand</option>
+                    <option>Nicaragua</option>
+                    <option>Niger</option>
+                    <option>Nigeria</option>
+                    <option>Niue</option>
+                    <option>Norfolk Island</option>
+                    <option>North Korea</option>
+                    <option>Northern Mariana Islands</option>
+                    <option>Norway</option>
+                    <option>Oman</option>
+                    <option>Pakistan</option>
+                    <option>Palau</option>
+                    <option>Panama</option>
+                    <option>Papua New Guinea</option>
+                    <option>Paraguay</option>
+                    <option>Peru</option>
+                    <option>Philippines</option>
+                    <option>Pitcairn Island</option>
+                    <option>Poland</option>
+                    <option>Polynesia</option>
+                    <option>Portugal</option>
+                    <option>Puerto Rico</option>
+                    <option>Qatar</option>
+                    <option>Reunion</option>
+                    <option>Romania</option>
+                    <option>Russian Federation</option>
+                    <option>Rwanda</option>
+                    <option>S. Georgia &amp; S. Sandwich Isls.</option>
+                    <option>Saint Helena</option>
+                    <option>Saint Kitts &amp; Nevis Anguilla</option>
+                    <option>Saint Lucia</option>
+                    <option>Saint Pierre and Miquelon</option>
+                    <option>Saint Vincent &amp; Grenadines</option>
+                    <option>Samoa</option>
+                    <option>San Marino</option>
+                    <option>Sao Tome and Principe</option>
+                    <option>Saudi Arabia</option>
+                    <option>Senegal</option>
+                    <option>Seychelles</option>
+                    <option>Sierra Leone</option>
+                    <option>Singapore</option>
+                    <option>Slovak Republic</option>
+                    <option>Slovenia</option>
+                    <option>Solomon Islands</option>
+                    <option>Somalia</option>
+                    <option>South Africa</option>
+                    <option>South Korea</option>
+                    <option>Spain</option>
+                    <option>Sri Lanka</option>
+                    <option>Sudan</option>
+                    <option>Suriname</option>
+                    <option>Svalbard and Jan Mayen Islands</option>
+                    <option>Swaziland</option>
+                    <option>Sweden</option>
+                    <option>Switzerland</option>
+                    <option>Syria</option>
+                    <option>Taiwan</option>
+                    <option>Tajikistan</option>
+                    <option>Tanzania</option>
+                    <option>Thailand</option>
+                    <option>Togo</option>
+                    <option>Tokelau</option>
+                    <option>Tonga</option>
+                    <option>Trinidad and Tobago</option>
+                    <option>Tunisia</option>
+                    <option>Turkey</option>
+                    <option>Turkmenistan</option>
+                    <option>Turks and Caicos Islands</option>
+                    <option>Tuvalu</option>
+                    <option>USA Minor Outlying Islands</option>
+                    <option>Uganda</option>
+                    <option>Ukraine</option>
+                    <option>United Arab Emirates</option>
+                    <option>United Kingdom</option>
+                    <option>Uruguay</option>
+                    <option>Uzbekistan</option>
+                    <option>Vanuatu</option>
+                    <option>Venezuela</option>
+                    <option>Vietnam</option>
+                    <option>Virgin Islands (British)</option>
+                    <option>Virgin Islands (USA)</option>
+                    <option>Wallis and Futuna Islands</option>
+                    <option>Weather Stations</option>
+                    <option>Western Sahara</option>
+                    <option>Yemen</option>
+                    <option>Yugoslavia</option>
+                    <option>Zaire</option>
+                    <option>Zambia</option>
+                    <option>Zimbabwe</option>
+    
+    
+                  </select>
+                  <div *ngIf="signUp.get('country').touched && signUp.get('country').invalid" class="invalid-feedback">
+                    <div *ngIf="signUp.get('country').errors.required" class="text-left">Please select Country</div>
+                  </div>
+                  
+                </div>
+              </div>
+              
+              <div class="form-group form-check row">
+                <div class="col-sm-12">
+                  <input type="checkbox" class="form-check-input" name="checkbox" formControlName="checkbox" (change)="toggleEditable($event)" [ngClass]="{'is-invalid': signUp.get('checkbox').touched && signUp.get('checkbox').invalid }">
+                  <span class="form-check-label">By continuing i agree to the <a routerLink="/terms" class="lockc">Terms</a> and <a routerLink="/terms" class="lockc">Conditions</a></span>
+                  <div *ngIf="signUp.get('checkbox').touched && signUp.get('checkbox').invalid" class="invalid-feedback">
+                    <div *ngIf="signUp.get('checkbox').errors.required">Check the Box to Proceed</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <button class="btn btn-primary" (click)='signUpAction()' [disabled]="!signUp.valid">Sign Up</button>
+                </div>
+              </div>
+            </form>
+    
+            <div class="text-center">
+              <p>Already have an account? <a routerLink="/sign-in" href="" class="lockc">Sign in</a></p>
+            </div>
+      
+        </div>
+      </div>
+
+    </div>
+    <div class="col-lg-3 col-md-3">
+
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
+      
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="row mt-5">
+      <div class="col">
+          <div class="col-sm-12">
+              <h4 style="text-align: center; color: #3e64ff;">List of All Users</h4>
+          </div>
+          <div class="table-responsive">
+              <table class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th scope="col">Username</th>
+                          
+                          <th scope="col">Email</th>
+                          <th scope="col">Balance</th>
+                          <th scope="col">Referral</th>
+                          <th scope="col">Country</th>
+                          <th scope="col">Magnifeye</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">De-activate</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor ="let a of info | paginate: { id:'listing_pagination',
+                          itemsPerPage: 10,
+                          currentPage: page,
+                          totalItems: totalRecords }">
+                          <td>{{a.username}}</td>
+                          
+                          <td>{{a.email}}</td>
+                          <td>&#36;{{a.balance}}</td>
+                          <td>{{a.referral}}</td>
+                          <td>{{a.country}}</td>
+                          <td>{{a.magnifeye}}</td>
+                          <td>{{a.date}}</td>
+                          <td><button class="btn btn-danger" (click)="deActivate(a.username)">De-activate</button></td>
+                      </tr>
+                  </tbody>
+              </table>
+              <div>
+                  <pagination-controls id="listing_pagination" maxSize="5" directionalLinks="true" (pageChange)="page=$event"></pagination-controls>
+              </div>
+
+          </div>
+          
+
+      </div>
+
+  </div>
+
+</div>

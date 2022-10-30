@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row mt-5">
+      <div class="col">
+          <div class="col-sm-12">
+              <h4 style="text-align: center; color: #3e64ff;">List of All Rewards</h4>
+          </div>
+          <div class="table-responsive">
+              <table class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th scope="col">Price</th>
+                          <th scope="col">Bonus</th>
+                         
+                          <th scope="col">De-activate</th>
+                         
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor ="let a of info | paginate: { id:'listing_pagination',
+                      itemsPerPage: 10,
+                      currentPage: page,
+                      totalItems: totalRecords }">
+                          <td>{{a.price}}</td>
+                          <td>{{a.bonus}}</td>
+                          
+                          <td><button class="btn btn-danger" (click)="deActivate(a.price)">De-activate</button></td>
+
+                      </tr>
+                  </tbody>
+              </table>
+              <div>
+                  <pagination-controls id="listing_pagination" maxSize="5" directionalLinks="true" (pageChange)="page=$event"></pagination-controls>
+              </div>
+
+          </div>
+          
+
+      </div>
+
+  </div>
+
+</div>

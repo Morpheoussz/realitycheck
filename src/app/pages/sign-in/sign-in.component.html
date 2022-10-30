@@ -1,0 +1,101 @@
+<nav class="navbar navbar-expand-md navbar-expand-lg colorr2 sticky-top">
+  <a class="navbar-brand colorr" href="" routerLink="">RealityCheck
+    <!-- <img class="sizee" src="../../../assets/img/icons/magnifeye.png" alt="Reality-Check"/> -->
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="cover">
+    <span class="navbar-toggler-icon line"></span>
+    <span class="navbar-toggler-icon line"></span>
+    <span class="navbar-toggler-icon line"></span>
+    </span>
+  </button>
+  <!-- <i class="fa fa-bars fa-2x" aria-hidden="true"></i> -->
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <span class="space"></span>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link colorr" href="" routerLink="">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link colorr" pageScroll href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link colorr" pageScroll href="#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link colorr" pageScroll href="#support">Support</a>
+      </li>
+      <!-- <li class="nav-item">
+          <a class="nav-link colorr" href="" routerLink="/sign-in">Sign In</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link colorr" href="" routerLink="/sign-up">Create Account</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row mt-5" >
+    <div class="col-lg-3 col-md-3">
+
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="header">
+        <h3>Login</h3><br>
+        <p>New to RealityCheck ? <a routerLink="/sign-up">Create account</a></p>
+    
+      </div>
+      <div class="shadow p-4 bg-white curve">
+        <div class="signin p-3">
+          <!-- <div class="container"> -->
+            <form name="signIn" [formGroup]="signIn">
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <input type="text" name="username" class="form-control large" placeholder="Username" formControlName="username" [ngClass]="{'is-invalid': signIn.get('username').touched && signIn.get('username').invalid }">
+                  <div *ngIf="signIn.get('username').touched && signIn.get('username').invalid" class="invalid-feedback">
+                    <div *ngIf="signIn.get('username').errors.required" class="text-left">Invalid username</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <input type="password" name="password" class="form-control large" placeholder="Password" formControlName="password" [ngClass]="{'is-invalid': signIn.get('password').touched && signIn.get('password').invalid }">
+                  <div *ngIf="signIn.get('password').touched && signIn.get('password').invalid" class="invalid-feedback">
+                    <div *ngIf="signIn.get('password').errors.required" class="text-left">Invalid password</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <button class="btn button" (click)='signInAction()' [disabled]="!signIn.valid">Login</button>
+                </div>
+              </div>
+              
+            </form>
+            <div class="login-help-links lockc">
+              <div class="forgot-password">
+                <a class="lockc" routerLink="/forgot-password">Forgot Password?</a>
+      
+              </div>
+              <!-- <div class="forgot-username lockc">
+                <a class="lockc" routerLink="/forgot-username">Forgot Username?</a>
+      
+              </div> -->
+      
+            </div>
+      
+        </div>
+      </div>
+
+    </div>
+    <div class="col-lg-3 col-md-3">
+
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
+      
+
+    </div>
+  </div>
+</div>

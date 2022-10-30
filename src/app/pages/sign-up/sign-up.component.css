@@ -1,0 +1,151 @@
+.colorr{
+    color: #3e64ff;
+}
+.color-hd{
+    color: #3e65ffe8;
+}
+.line{
+    height: 0.5px;
+    width: 30px;
+    border: 1.3px solid #3e64ff;
+    display: block;
+    margin: 6px auto;
+    background-color: #3e64ff;
+}
+.collapse .navbar-collapse .navbar-nav .nav-item a{
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin: 10px auto;
+
+}
+.space{
+    width: 50px;
+    margin: auto;
+}
+.navbar-toggler:focus{
+    outline: 5px auto #3e64ff;
+}
+.faq-bg{
+    background-color: #3e64ff;
+}
+.colorr3{
+    color: #fff;
+
+}
+.colorr4{
+    color: #fff;
+}
+.colorr5{
+    background-color: #1038da;
+}
+.colorr2{
+    background-color: #fff;
+}
+/* .top-marg{
+    margin-top: 105px;
+} */
+.sizee{
+    /* width: 45px;
+    height: 55px; */
+    width: 55px;
+    height: 59px;
+}
+
+
+.header{
+    padding: 30px;
+    text-align: center;
+}
+.header h3{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3e64ff;
+    font-family: Celias Bold,Helvetica,Arial;
+
+}
+.header p{
+    color: #4061e6;
+    font-size: .8125rem;
+}
+.header p a{
+    color: #3e64ff;
+    font-size: .8125rem;
+    text-decoration: underline;
+}
+/* div p .lockc{
+    color: #3e64ff;
+    font-size: .8125rem;
+    text-decoration: underline;
+
+} */
+.cbox{
+    margin-left: 0;
+}
+.icon{
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.lockc{
+    color: #3e64ff !important ;
+}
+.large{
+    height: 50px;
+}
+.large:focus{
+    border: 1px solid #3e64ff;
+    box-shadow: 0 0 5px #3e65ff7e;
+    /* box-shadow: 0 0 5px rgba(81, 203, 238, 1); */
+
+    /* rgba(142, 114, 209, 0.2); */
+}
+.signin{
+    text-align: center;
+}
+.button{
+    background-color: #3e64ff;
+    color: #fff;
+    text-align: center;
+    border-radius: 30px;
+    width: 100%;
+    height: 3.125rem;
+    border: 1px solid transparent;
+    padding: 0 1.25rem;
+    cursor: pointer;
+}
+button:focus{
+    box-shadow: 0 0 0 0.2rem #3e65ff88;
+    outline: 0;
+}
+
+
+.btn-pur{
+    background-color: #fff;
+    border-color: #fff;
+    color: #5741d9;
+    border-radius: 30px !important ;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem #7e69f0;
+}
+
+.login-help-links{
+    display: flex;
+}
+.login-help-links .forgot-password{
+    width: 50%;
+    text-align: left;
+    
+    font-size: .8125rem;
+}
+.curve{
+    border-radius: 30px !important;
+
+}
+/* a:not([href]):not([tabindex]) {
+
+} */
