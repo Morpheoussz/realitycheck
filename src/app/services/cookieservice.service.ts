@@ -32,12 +32,12 @@ export class CookieserviceService {
       if(jwtchk != '' && jwtself != ''){  
 
         if(datenow > jwtchk){
-          this.routes.navigate(['/deltarealitymanageralphadatacenter']);
+          this.routes.navigate(['/realitymanagerdatacenter']);
         }else{
           return jwtself;
         }
       }else{
-        this.routes.navigate(['/deltarealitymanageralphadatacenter']);
+        this.routes.navigate(['/realitymanagerdatacenter']);
       }
     }
 
